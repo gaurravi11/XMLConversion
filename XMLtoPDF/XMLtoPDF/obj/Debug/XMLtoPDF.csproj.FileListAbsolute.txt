@@ -34,3 +34,5 @@ G:\Code\Amit ji\XMLtoPDF\XMLtoPDF\bin\Debug\XMLtoPDF.exe
 G:\Code\Amit ji\XMLtoPDF\XMLtoPDF\bin\Debug\XMLtoPDF.pdb
 G:\Code\Amit ji\XMLtoPDF\XMLtoPDF\obj\Debug\XMLtoPDF.exe.manifest
 G:\Code\Amit ji\XMLtoPDF\XMLtoPDF\obj\Debug\XMLtoPDF.application
+G:\Code\Amit ji\Repos\XMLtoPDF\XMLtoPDF\obj\Debug\XMLtoPDF.exe
+G:\Code\Amit ji\Repos\XMLtoPDF\XMLtoPDF\obj\Debug\XMLtoPDF.pdb

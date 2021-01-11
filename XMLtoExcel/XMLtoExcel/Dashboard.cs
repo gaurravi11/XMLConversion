@@ -18,6 +18,7 @@ namespace XMLtoExcel
     public partial class Dashboard : Form
     {
         string[] files;
+        DataSet FinalDataset;
         public Dashboard()
         {
             InitializeComponent();
@@ -25,7 +26,137 @@ namespace XMLtoExcel
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            //
+            
+        }
+
+
+        private void setFinalDataset()
+        {
+            FinalDataset = new DataSet() { EnforceConstraints = false };
+            string path = $"{Application.StartupPath}\\Files\\Sample.xml";
+            string FileName = Path.GetFileNameWithoutExtension(path);
+            var xDocument = XDocument.Parse(File.ReadAllText(path, System.Text.Encoding.UTF8));
+            StringReader sr = new StringReader(xDocument.ToString());
+            DataSet XMLData = new DataSet();
+            XMLData.ReadXml(sr);
+
+            FinalDataset = XMLData.Clone();
+
+            foreach (DataTable dt in FinalDataset.Tables)
+            {
+                dt.Constraints.Clear();
+                DataColumn Col = dt.Columns.Add("FileKaNo");
+                Col.SetOrdinal(0);
+            }
+        }
+        private void XMLtoDatagrid_New(string FolderName)
+        {
+            try
+            {
+                setFinalDataset();
+                /*This Dataset is the main dataset to be extracted as excel*/
+                //DataSet MainXMLData = new DataSet();
+                if (files == null || files.Length < 1)
+                {
+                    MessageBox.Show("Please Select Folder of XML Files");
+                    return;
+                }
+                int rows = 0;
+                string FileName = "";
+                foreach (var path in files)
+                {
+                    FileName = Path.GetFileNameWithoutExtension(path);
+                    var xDocument = XDocument.Parse(File.ReadAllText(path, System.Text.Encoding.UTF8));
+                    StringReader sr = new StringReader(xDocument.ToString());
+                    DataSet XMLData = new DataSet();
+                    //XMLData.ReadXml(path, XmlReadMode.InferSchema);
+                    XMLData.ReadXml(sr);
+                    //if (rows == 0)
+                    //{
+                    //    /*Cloning the Dataset with what we get it from the XMLs*/
+                    //    MainXMLData = XMLData.Clone();
+
+                    //    foreach (DataTable dt in MainXMLData.Tables)
+                    //    {
+                    //        DataColumn Col = dt.Columns.Add("FileKaNo");
+                    //        Col.SetOrdinal(0);
+                    //    }
+
+                    //    //dataGridView1.Columns.Add("FileName", "FileName");
+                    //    //foreach (DataColumn dc in XMLData.Tables[0].Columns)
+                    //    //{
+                    //    //    dataGridView1.Columns.Add(dc.ColumnName, dc.ColumnName);
+                    //    //}
+                    //}
+                    //else
+                    //{
+                    //    var result = XMLData.Tables.Cast<DataTable>()
+                    //                            .Where(x => !MainXMLData.Tables.Cast<DataTable>().Any(y => y.TableName == x.TableName)).ToList();
+
+                    //    foreach (var list in result)
+                    //    {
+                    //        MainXMLData.Tables.Add(list.TableName);
+                    //    }
+
+                    //    foreach (DataTable dt in MainXMLData.Tables)
+                    //    {
+                    //        DataColumnCollection columns = dt.Columns;
+                    //        if (!columns.Contains("FileKaNo"))
+                    //        {
+                    //            DataColumn Col = dt.Columns.Add("FileKaNo");
+                    //            Col.SetOrdinal(0);
+                    //        }
+                    //    }
+                    //}
+
+                    foreach (DataTable dt in FinalDataset.Tables)
+                    {
+                        if (XMLData.Tables.Contains(dt.TableName))
+                        {
+                            DataTable dataTable = XMLData.Tables[dt.TableName];
+                            //if (rows != 0)
+                            //{
+                            //    var result = dataTable.Columns.Cast<DataColumn>()
+                            //                        .Where(x => !dt.Columns.Cast<DataColumn>().Any(y => y.ColumnName == x.ColumnName)).ToList();
+
+                            //    foreach (var list in result)
+                            //    {
+                            //        dt.Columns.Add(list.ColumnName);
+                            //    }
+                            //}
+
+                            foreach (DataRow dr in dataTable.Rows)
+                            {
+                                DataRow dataRow = dt.NewRow();
+                                dataRow["FileKaNo"] = FileName;
+                                foreach (DataColumn dc in dataTable.Columns)
+                                {
+                                    if (dt.Columns.Contains(dc.ColumnName))
+                                        dataRow[dc.ColumnName] = dr[dc.ColumnName] == null ? "" : dr[dc.ColumnName];
+                                }
+                                dt.Rows.Add(dataRow);
+                            }
+                        }
+                        rows++;
+                    }
+                }
+                FolderBrowserDialog fd = new FolderBrowserDialog();
+                fd.Description = "Select Folder For Output Excel File";
+                if (fd.ShowDialog() == DialogResult.OK)
+                {
+                    using (XLWorkbook wb = new XLWorkbook())
+                    {
+                        wb.Worksheets.Add(FinalDataset);
+                        wb.SaveAs(fd.SelectedPath + @"\" + FolderName + ".xlsx");
+
+                        MessageBox.Show("Excel Created Successfully", "XML DATA");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void XMLtoDatagrid(string FolderName)
@@ -330,7 +461,7 @@ namespace XMLtoExcel
                                               .ToArray();
                 }
 
-                XMLtoDatagrid(Path.GetFileName(fd.SelectedPath));
+                XMLtoDatagrid_New(Path.GetFileName(fd.SelectedPath));
             }
             else
             {
