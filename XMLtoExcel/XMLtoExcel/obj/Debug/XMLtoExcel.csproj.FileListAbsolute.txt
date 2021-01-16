@@ -43,7 +43,6 @@ G:\Code\Amit ji\Repos\XMLtoExcel\XMLtoExcel\bin\Debug\ExcelDataReader.xml
 G:\Code\Amit ji\Repos\XMLtoExcel\XMLtoExcel\bin\Debug\ExcelDataReader.DataSet.pdb
 G:\Code\Amit ji\Repos\XMLtoExcel\XMLtoExcel\bin\Debug\ExcelDataReader.DataSet.xml
 G:\Code\Amit ji\Repos\XMLtoExcel\XMLtoExcel\bin\Debug\ExcelNumberFormat.xml
-G:\Code\Amit ji\Repos\XMLtoExcel\XMLtoExcel\obj\Debug\XMLtoExcel.csprojAssemblyReference.cache
 G:\Code\Amit ji\Repos\XMLtoExcel\XMLtoExcel\obj\Debug\XMLtoExcel.Dashboard.resources
 G:\Code\Amit ji\Repos\XMLtoExcel\XMLtoExcel\obj\Debug\XMLtoExcel.Properties.Resources.resources
 G:\Code\Amit ji\Repos\XMLtoExcel\XMLtoExcel\obj\Debug\XMLtoExcel.csproj.GenerateResource.cache
@@ -52,3 +51,7 @@ G:\Code\Amit ji\Repos\XMLtoExcel\XMLtoExcel\obj\Debug\XMLtoExcel.csproj.CopyComp
 G:\Code\Amit ji\Repos\XMLtoExcel\XMLtoExcel\obj\Debug\XMLtoExcel.exe
 G:\Code\Amit ji\Repos\XMLtoExcel\XMLtoExcel\obj\Debug\XMLtoExcel.pdb
 G:\Code\Amit ji\Repos\XMLtoExcel\XMLtoExcel\bin\Debug\Files\Sample.xml
+G:\Code\Amit ji\Repos\XMLtoExcel\XMLtoExcel\bin\Debug\Files\CGXMLSchema_new_v3.xsd
+G:\Code\Amit ji\Repos\XMLtoExcel\XMLtoExcel\bin\Debug\Files\CGXMLSchema_new_v31.Designer.cs
+G:\Code\Amit ji\Repos\XMLtoExcel\XMLtoExcel\bin\Debug\Files\CGXMLSchema_new_v3.xsc
+G:\Code\Amit ji\Repos\XMLtoExcel\XMLtoExcel\bin\Debug\Files\CGXMLSchema_new_v3.xss

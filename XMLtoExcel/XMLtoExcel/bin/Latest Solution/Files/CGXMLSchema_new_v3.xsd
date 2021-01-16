@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CGXML" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CGXML" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="CGXML" msprop:Generator_DataSetName="CGXML">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Address" msprop:Generator_UserTableName="Address" msprop:Generator_RowDeletedName="AddressRowDeleted" msprop:Generator_RowChangedName="AddressRowChanged" msprop:Generator_RowClassName="AddressRow" msprop:Generator_RowChangingName="AddressRowChanging" msprop:Generator_RowEvArgName="AddressRowChangeEvent" msprop:Generator_RowEvHandlerName="AddressRowChangeEventHandler" msprop:Generator_TableClassName="AddressDataTable" msprop:Generator_TableVarName="tableAddress" msprop:Generator_RowDeletingName="AddressRowDeleting" msprop:Generator_TablePropName="Address">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ADDRESSID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:Caption="ID-ul unic al adresei" msprop:Generator_UserColumnName="ADDRESSID" msprop:Generator_ColumnPropNameInRow="ADDRESSID" msprop:Generator_ColumnVarNameInTable="columnADDRESSID" msprop:Generator_ColumnPropNameInTable="ADDRESSIDColumn" type="xs:int" />
+              <xs:element name="SIRSUP" msdata:Caption="Siruta superioara reprezentand UAT-ul" msprop:Generator_UserColumnName="SIRSUP" msprop:Generator_ColumnPropNameInRow="SIRSUP" msprop:Generator_ColumnVarNameInTable="columnSIRSUP" msprop:Generator_ColumnPropNameInTable="SIRSUPColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SIRUTA" msdata:Caption="Siruta reprezentand localitatea" msprop:Generator_UserColumnName="SIRUTA" msprop:Generator_ColumnPropNameInRow="SIRUTA" msprop:Generator_ColumnVarNameInTable="columnSIRUTA" msprop:Generator_ColumnPropNameInTable="SIRUTAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INTRAVILAN" msdata:Caption="Valoare booleana Intravilan" msprop:Generator_UserColumnName="INTRAVILAN" msprop:Generator_ColumnPropNameInRow="INTRAVILAN" msprop:Generator_ColumnVarNameInTable="columnINTRAVILAN" msprop:Generator_ColumnPropNameInTable="INTRAVILANColumn" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="DISTRICTTYPE" msdata:Caption="Tip Subunitate Administrativa (Dictionar)" msprop:Generator_UserColumnName="DISTRICTTYPE" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="DISTRICTTYPE" msprop:Generator_ColumnPropNameInTable="DISTRICTTYPEColumn" msprop:Generator_ColumnVarNameInTable="columnDISTRICTTYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DISTRICTNAME" msdata:Caption="Denumire Subunitate Administrativa " msprop:Generator_UserColumnName="DISTRICTNAME" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="DISTRICTNAME" msprop:Generator_ColumnPropNameInTable="DISTRICTNAMEColumn" msprop:Generator_ColumnVarNameInTable="columnDISTRICTNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STREETTYPE" msdata:Caption="Tip Strada (Dictionar)" msprop:Generator_UserColumnName="STREETTYPE" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="STREETTYPE" msprop:Generator_ColumnPropNameInTable="STREETTYPEColumn" msprop:Generator_ColumnVarNameInTable="columnSTREETTYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STREETNAME" msdata:Caption="Denumire Strada " msprop:Generator_UserColumnName="STREETNAME" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="STREETNAME" msprop:Generator_ColumnPropNameInTable="STREETNAMEColumn" msprop:Generator_ColumnVarNameInTable="columnSTREETNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="POSTALNUMBER" msdata:Caption="Numar Postal " msprop:Generator_UserColumnName="POSTALNUMBER" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="POSTALNUMBER" msprop:Generator_ColumnPropNameInTable="POSTALNUMBERColumn" msprop:Generator_ColumnVarNameInTable="columnPOSTALNUMBER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BLOCK" msdata:Caption="Bloc " msprop:Generator_UserColumnName="BLOCK" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="BLOCK" msprop:Generator_ColumnPropNameInTable="BLOCKColumn" msprop:Generator_ColumnVarNameInTable="columnBLOCK" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ENTRY" msdata:Caption="Scara " msprop:Generator_UserColumnName="ENTRY" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="ENTRY" msprop:Generator_ColumnPropNameInTable="ENTRYColumn" msprop:Generator_ColumnVarNameInTable="columnENTRY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FLOOR" msdata:Caption="Etaj " msprop:Generator_UserColumnName="FLOOR" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="FLOOR" msprop:Generator_ColumnPropNameInTable="FLOORColumn" msprop:Generator_ColumnVarNameInTable="columnFLOOR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="APNO" msdata:Caption="Numar apartament " msprop:Generator_UserColumnName="APNO" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="APNO" msprop:Generator_ColumnPropNameInTable="APNOColumn" msprop:Generator_ColumnVarNameInTable="columnAPNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ZIPCODE" msdata:Caption="Cod Postal " msprop:Generator_UserColumnName="ZIPCODE" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="ZIPCODE" msprop:Generator_ColumnPropNameInTable="ZIPCODEColumn" msprop:Generator_ColumnVarNameInTable="columnZIPCODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPTION" msdata:Caption="Descriere suplimentara " msprop:Generator_UserColumnName="DESCRIPTION" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="DESCRIPTION" msprop:Generator_ColumnPropNameInTable="DESCRIPTIONColumn" msprop:Generator_ColumnVarNameInTable="columnDESCRIPTION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SECTION" msdata:Caption="Tronson " msprop:Generator_UserColumnName="SECTION" msprop:Generator_ColumnVarNameInTable="columnSECTION" msprop:Generator_ColumnPropNameInRow="SECTION" msprop:Generator_ColumnPropNameInTable="SECTIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Building" msprop:Generator_UserTableName="Building" msprop:Generator_RowDeletedName="BuildingRowDeleted" msprop:Generator_RowChangedName="BuildingRowChanged" msprop:Generator_RowClassName="BuildingRow" msprop:Generator_RowChangingName="BuildingRowChanging" msprop:Generator_RowEvArgName="BuildingRowChangeEvent" msprop:Generator_RowEvHandlerName="BuildingRowChangeEventHandler" msprop:Generator_TableClassName="BuildingDataTable" msprop:Generator_TableVarName="tableBuilding" msprop:Generator_RowDeletingName="BuildingRowDeleting" msprop:Generator_TablePropName="Building">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BUILDINGID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:Caption="ID-ul unic al constructiei" msprop:Generator_UserColumnName="BUILDINGID" msprop:Generator_ColumnPropNameInRow="BUILDINGID" msprop:Generator_ColumnVarNameInTable="columnBUILDINGID" msprop:Generator_ColumnPropNameInTable="BUILDINGIDColumn" type="xs:int" />
+              <xs:element name="LANDID" msdata:Caption="ID-ul terenului pe care se afla constructia " msprop:Generator_UserColumnName="LANDID" msprop:Generator_ColumnPropNameInRow="LANDID" msprop:Generator_ColumnVarNameInTable="columnLANDID" msprop:Generator_ColumnPropNameInTable="LANDIDColumn" type="xs:int" />
+              <xs:element name="ADDRESSID" msdata:Caption="ID-ul adresei constructiei " msprop:Generator_UserColumnName="ADDRESSID" msprop:Generator_ColumnPropNameInRow="ADDRESSID" msprop:Generator_ColumnVarNameInTable="columnADDRESSID" msprop:Generator_ColumnPropNameInTable="ADDRESSIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="BUILDNO" msdata:Caption="Numarul constructiei " msprop:Generator_UserColumnName="BUILDNO" msprop:Generator_ColumnPropNameInRow="BUILDNO" msprop:Generator_ColumnVarNameInTable="columnBUILDNO" msprop:Generator_ColumnPropNameInTable="BUILDNOColumn" type="xs:int" />
+              <xs:element name="MEASUREDAREA" msdata:Caption="Suprafata masurata a constructiei " msprop:Generator_UserColumnName="MEASUREDAREA" msprop:Generator_ColumnPropNameInRow="MEASUREDAREA" msprop:Generator_ColumnVarNameInTable="columnMEASUREDAREA" msprop:Generator_ColumnPropNameInTable="MEASUREDAREAColumn" type="xs:double" default="0" minOccurs="0" />
+              <xs:element name="TOTALAREA" msdata:Caption="Suprafata desfasurata a constructiei " msprop:Generator_UserColumnName="TOTALAREA" msprop:Generator_ColumnPropNameInRow="TOTALAREA" msprop:Generator_ColumnVarNameInTable="columnTOTALAREA" msprop:Generator_ColumnPropNameInTable="TOTALAREAColumn" type="xs:double" default="0" minOccurs="0" />
+              <xs:element name="BUILDINGDESTINATION" msdata:Caption="Cod grupa destinatie(Dictionar)" msprop:Generator_UserColumnName="BUILDINGDESTINATION" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="BUILDINGDESTINATION" msprop:Generator_ColumnPropNameInTable="BUILDINGDESTINATIONColumn" msprop:Generator_ColumnVarNameInTable="columnBUILDINGDESTINATION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LEVELSNO" msdata:Caption="Numar nivele constructie " msprop:Generator_UserColumnName="LEVELSNO" msprop:Generator_ColumnPropNameInRow="LEVELSNO" msprop:Generator_ColumnVarNameInTable="columnLEVELSNO" msprop:Generator_ColumnPropNameInTable="LEVELSNOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IUNO" msdata:Caption="Numar unitati individuale " msprop:Generator_UserColumnName="IUNO" msprop:Generator_ColumnPropNameInRow="IUNO" msprop:Generator_ColumnVarNameInTable="columnIUNO" msprop:Generator_ColumnPropNameInTable="IUNOColumn" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="TAXVALUE" msdata:Caption="Valoare de impozitare " msprop:Generator_UserColumnName="TAXVALUE" msprop:Generator_ColumnPropNameInRow="TAXVALUE" msprop:Generator_ColumnVarNameInTable="columnTAXVALUE" msprop:Generator_ColumnPropNameInTable="TAXVALUEColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="NOTES" msdata:Caption="Comentarii/Mentiuni constructie " msprop:Generator_UserColumnName="NOTES" msprop:Generator_ColumnPropNameInRow="NOTES" msprop:Generator_ColumnVarNameInTable="columnNOTES" msprop:Generator_ColumnPropNameInTable="NOTESColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ISLEGAL" msdata:Caption="Valoare booleana 'Are acte'" msprop:Generator_UserColumnName="ISLEGAL" msprop:Generator_ColumnVarNameInTable="columnISLEGAL" msprop:Generator_ColumnPropNameInRow="ISLEGAL" msprop:Generator_ColumnPropNameInTable="ISLEGALColumn" type="xs:boolean" default="true" />
+              <xs:element name="LEGALAREA" msdata:Caption="Suprafata din acte a constructiei " msprop:Generator_UserColumnName="LEGALAREA" msprop:Generator_ColumnPropNameInRow="LEGALAREA" msprop:Generator_ColumnVarNameInTable="columnLEGALAREA" msprop:Generator_ColumnPropNameInTable="LEGALAREAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="E2IDENTIFIER" msdata:Caption="Identificatorul electronic apartinand sistemului ETERRA" msprop:Generator_UserColumnName="E2IDENTIFIER" msprop:Generator_ColumnVarNameInTable="columnE2IDENTIFIER" msprop:Generator_ColumnPropNameInRow="E2IDENTIFIER" msprop:Generator_ColumnPropNameInTable="E2IDENTIFIERColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PAPERCADNO" msdata:Caption="Numar cadastral hartie " msprop:Generator_UserColumnName="PAPERCADNO" msprop:Generator_ColumnVarNameInTable="columnPAPERCADNO" msprop:Generator_ColumnPropNameInRow="PAPERCADNO" msprop:Generator_ColumnPropNameInTable="PAPERCADNOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PAPERLBNO" msdata:Caption="Numar carte funciara hartie" msprop:Generator_UserColumnName="PAPERLBNO" msprop:Generator_ColumnVarNameInTable="columnPAPERLBNO" msprop:Generator_ColumnPropNameInRow="PAPERLBNO" msprop:Generator_ColumnPropNameInTable="PAPERLBNOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TOPONO" msdata:Caption="Numar topografic" msprop:Generator_UserColumnName="TOPONO" msprop:Generator_ColumnVarNameInTable="columnTOPONO" msprop:Generator_ColumnPropNameInRow="TOPONO" msprop:Generator_ColumnPropNameInTable="TOPONOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CADGENNO" msdata:Caption="Numar cadastru general " msprop:Generator_UserColumnName="CADGENNO" msprop:Generator_ColumnVarNameInTable="columnCADGENNO" msprop:Generator_ColumnPropNameInRow="CADGENNO" msprop:Generator_ColumnPropNameInTable="CADGENNOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BuildingCommonParts" msprop:Generator_UserTableName="BuildingCommonParts" msprop:Generator_RowDeletedName="BuildingCommonPartsRowDeleted" msprop:Generator_RowChangedName="BuildingCommonPartsRowChanged" msprop:Generator_RowClassName="BuildingCommonPartsRow" msprop:Generator_RowChangingName="BuildingCommonPartsRowChanging" msprop:Generator_RowEvArgName="BuildingCommonPartsRowChangeEvent" msprop:Generator_RowEvHandlerName="BuildingCommonPartsRowChangeEventHandler" msprop:Generator_TableClassName="BuildingCommonPartsDataTable" msprop:Generator_TableVarName="tableBuildingCommonParts" msprop:Generator_RowDeletingName="BuildingCommonPartsRowDeleting" msprop:Generator_TablePropName="BuildingCommonParts">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BUILDINGCOMMONPARTID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:Caption="ID-ul unic al partii comune " msprop:Generator_UserColumnName="BUILDINGCOMMONPARTID" msprop:Generator_ColumnPropNameInRow="BUILDINGCOMMONPARTID" msprop:Generator_ColumnVarNameInTable="columnBUILDINGCOMMONPARTID" msprop:Generator_ColumnPropNameInTable="BUILDINGCOMMONPARTIDColumn" type="xs:int" />
+              <xs:element name="BUILDINGID" msdata:Caption="ID-ul constructiei de care apartine partea comuna " msprop:Generator_UserColumnName="BUILDINGID" msprop:Generator_ColumnPropNameInRow="BUILDINGID" msprop:Generator_ColumnVarNameInTable="columnBUILDINGID" msprop:Generator_ColumnPropNameInTable="BUILDINGIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="COMMONPARTTYPE" msdata:Caption="Tip parte comuna-Dictionar " msprop:Generator_UserColumnName="COMMONPARTTYPE" msprop:Generator_ColumnPropNameInRow="COMMONPARTTYPE" msprop:Generator_ColumnVarNameInTable="columnCOMMONPARTTYPE" msprop:Generator_ColumnPropNameInTable="COMMONPARTTYPEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Deed" msprop:Generator_UserTableName="Deed" msprop:Generator_RowDeletedName="DeedRowDeleted" msprop:Generator_RowChangedName="DeedRowChanged" msprop:Generator_RowClassName="DeedRow" msprop:Generator_RowChangingName="DeedRowChanging" msprop:Generator_RowEvArgName="DeedRowChangeEvent" msprop:Generator_RowEvHandlerName="DeedRowChangeEventHandler" msprop:Generator_TableClassName="DeedDataTable" msprop:Generator_TableVarName="tableDeed" msprop:Generator_RowDeletingName="DeedRowDeleting" msprop:Generator_TablePropName="Deed">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DEEDID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:Caption="ID-ul unic al actului/documentului " msprop:Generator_UserColumnName="DEEDID" msprop:Generator_ColumnPropNameInRow="DEEDID" msprop:Generator_ColumnVarNameInTable="columnDEEDID" msprop:Generator_ColumnPropNameInTable="DEEDIDColumn" type="xs:int" />
+              <xs:element name="DEEDNUMBER" msdata:Caption="Numarul actului/documentului " msprop:Generator_UserColumnName="DEEDNUMBER" msprop:Generator_ColumnPropNameInRow="DEEDNUMBER" msprop:Generator_ColumnVarNameInTable="columnDEEDNUMBER" msprop:Generator_ColumnPropNameInTable="DEEDNUMBERColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DEEDDATE" msdata:Caption="Data actului/documentului " msprop:Generator_UserColumnName="DEEDDATE" msprop:Generator_ColumnPropNameInRow="DEEDDATE" msprop:Generator_ColumnVarNameInTable="columnDEEDDATE" msprop:Generator_ColumnPropNameInTable="DEEDDATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DEEDTYPE" msdata:Caption="Tipul actului/documentului (Dictionar)" msprop:Generator_UserColumnName="DEEDTYPE" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="DEEDTYPE" msprop:Generator_ColumnPropNameInTable="DEEDTYPEColumn" msprop:Generator_ColumnVarNameInTable="columnDEEDTYPE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AUTHORITY" msdata:Caption="Autoritatea emitenta " msprop:Generator_UserColumnName="AUTHORITY" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="AUTHORITY" msprop:Generator_ColumnPropNameInTable="AUTHORITYColumn" msprop:Generator_ColumnVarNameInTable="columnAUTHORITY">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOTES" msdata:Caption="Descriere suplimentara act/document" msprop:Generator_UserColumnName="NOTES" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnNOTES" msprop:Generator_ColumnPropNameInTable="NOTESColumn" msprop:Generator_ColumnPropNameInRow="NOTES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FILEID" msdata:Caption="ID-ul descrierii fisierului de care se leaga actul/documentul " msprop:Generator_UserColumnName="FILEID" msprop:Generator_ColumnVarNameInTable="columnFILEID" msprop:Generator_ColumnPropNameInRow="FILEID" msprop:Generator_ColumnPropNameInTable="FILEIDColumn" type="xs:int" />
+              <xs:element name="VALUECURRENCY" msdata:Caption="Tip moneda valoare act/document " msprop:Generator_UserColumnName="VALUECURRENCY" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnVALUECURRENCY" msprop:Generator_ColumnPropNameInTable="VALUECURRENCYColumn" msprop:Generator_ColumnPropNameInRow="VALUECURRENCY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VALUEAMOUNT" msdata:Caption="Valoare act/document" msprop:Generator_UserColumnName="VALUEAMOUNT" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnVALUEAMOUNT" msprop:Generator_ColumnPropNameInTable="VALUEAMOUNTColumn" msprop:Generator_ColumnPropNameInRow="VALUEAMOUNT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FileDescription" msprop:Generator_UserTableName="FileDescription" msprop:Generator_RowDeletedName="FileDescriptionRowDeleted" msprop:Generator_RowChangedName="FileDescriptionRowChanged" msprop:Generator_RowClassName="FileDescriptionRow" msprop:Generator_RowChangingName="FileDescriptionRowChanging" msprop:Generator_RowEvArgName="FileDescriptionRowChangeEvent" msprop:Generator_RowEvHandlerName="FileDescriptionRowChangeEventHandler" msprop:Generator_TableClassName="FileDescriptionDataTable" msprop:Generator_TableVarName="tableFileDescription" msprop:Generator_RowDeletingName="FileDescriptionRowDeleting" msprop:Generator_TablePropName="FileDescription">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FILENAME" msdata:Caption="Denumirea fisierul CGXML " msprop:Generator_UserColumnName="FILENAME" msprop:Generator_ColumnPropNameInRow="FILENAME" msprop:Generator_ColumnVarNameInTable="columnFILENAME" msprop:Generator_ColumnPropNameInTable="FILENAMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EXPORTDATE" msdata:Caption="Data exportului fisierului din sistemul ETERRA" msprop:Generator_UserColumnName="EXPORTDATE" msprop:Generator_ColumnVarNameInTable="columnEXPORTDATE" msprop:Generator_ColumnPropNameInRow="EXPORTDATE" msprop:Generator_ColumnPropNameInTable="EXPORTDATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FILEVERSION" msdata:Caption="Versiunea fisierului CP/aplicatiei Generare CP cu care a fost generat " msprop:Generator_UserColumnName="FILEVERSION" msprop:Generator_ColumnPropNameInRow="FILEVERSION" msprop:Generator_ColumnVarNameInTable="columnFILEVERSION" msprop:Generator_ColumnPropNameInTable="FILEVERSIONColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OPERATIONTYPE" msdata:Caption="Tip operatiune cadastrala-Dictionar " msprop:Generator_UserColumnName="OPERATIONTYPE" msprop:Generator_ColumnPropNameInRow="OPERATIONTYPE" msprop:Generator_ColumnVarNameInTable="columnOPERATIONTYPE" msprop:Generator_ColumnPropNameInTable="OPERATIONTYPEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LICENSEDNAME" msdata:Caption="Denumire/Nume autorizat " msprop:Generator_UserColumnName="LICENSEDNAME" msprop:Generator_ColumnPropNameInRow="LICENSEDNAME" msprop:Generator_ColumnVarNameInTable="columnLICENSEDNAME" msprop:Generator_ColumnPropNameInTable="LICENSEDNAMEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LICENSENUMBER" msdata:Caption="Serie licenta autorizat " msprop:Generator_UserColumnName="LICENSENUMBER" msprop:Generator_ColumnPropNameInRow="LICENSENUMBER" msprop:Generator_ColumnVarNameInTable="columnLICENSENUMBER" msprop:Generator_ColumnPropNameInTable="LICENSENUMBERColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FILEID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:Caption="ID-ul unic al descrierii fisierului " msprop:Generator_UserColumnName="FILEID" msprop:Generator_ColumnVarNameInTable="columnFILEID" msprop:Generator_ColumnPropNameInRow="FILEID" msprop:Generator_ColumnPropNameInTable="FILEIDColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Land" msprop:Generator_UserTableName="Land" msprop:Generator_RowDeletedName="LandRowDeleted" msprop:Generator_RowChangedName="LandRowChanged" msprop:Generator_RowClassName="LandRow" msprop:Generator_RowChangingName="LandRowChanging" msprop:Generator_RowEvArgName="LandRowChangeEvent" msprop:Generator_RowEvHandlerName="LandRowChangeEventHandler" msprop:Generator_TableClassName="LandDataTable" msprop:Generator_TableVarName="tableLand" msprop:Generator_RowDeletingName="LandRowDeleting" msprop:Generator_TablePropName="Land">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LANDID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:Caption="ID-ul unic al terenului " msprop:Generator_UserColumnName="LANDID" msprop:Generator_ColumnPropNameInRow="LANDID" msprop:Generator_ColumnVarNameInTable="columnLANDID" msprop:Generator_ColumnPropNameInTable="LANDIDColumn" type="xs:int" />
+              <xs:element name="CADSECTOR" msdata:Caption="Sectorul cadastral in care se afla terenul" msprop:Generator_UserColumnName="CADSECTOR" msprop:Generator_ColumnVarNameInTable="columnCADSECTOR" msprop:Generator_ColumnPropNameInRow="CADSECTOR" msprop:Generator_ColumnPropNameInTable="CADSECTORColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ADDRESSID" msdata:Caption="ID-ul adresei terenului " msprop:Generator_UserColumnName="ADDRESSID" msprop:Generator_ColumnPropNameInRow="ADDRESSID" msprop:Generator_ColumnVarNameInTable="columnADDRESSID" msprop:Generator_ColumnPropNameInTable="ADDRESSIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MEASUREDAREA" msdata:Caption="Suprafata masurata teren " msprop:Generator_UserColumnName="MEASUREDAREA" msprop:Generator_ColumnPropNameInRow="MEASUREDAREA" msprop:Generator_ColumnVarNameInTable="columnMEASUREDAREA" msprop:Generator_ColumnPropNameInTable="MEASUREDAREAColumn" type="xs:double" default="0" />
+              <xs:element name="PARCELLEGALAREA" msdata:Caption="Supratafata totala din acte teren" msprop:Generator_UserColumnName="PARCELLEGALAREA" msprop:Generator_ColumnPropNameInRow="PARCELLEGALAREA" msprop:Generator_ColumnVarNameInTable="columnPARCELLEGALAREA" msprop:Generator_ColumnPropNameInTable="PARCELLEGALAREAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="ISNEW" msdata:Caption="Valoare booleana tip teren nou" msprop:Generator_UserColumnName="ISNEW" msprop:Generator_ColumnVarNameInTable="columnISNEW" msprop:Generator_ColumnPropNameInRow="ISNEW" msprop:Generator_ColumnPropNameInTable="ISNEWColumn" type="xs:boolean" default="true" minOccurs="0" />
+              <xs:element name="FILEID" msdata:Caption="ID-ul descrierii fisierului CP de care se leaga terenul" msprop:Generator_UserColumnName="FILEID" msprop:Generator_ColumnVarNameInTable="columnFILEID" msprop:Generator_ColumnPropNameInRow="FILEID" msprop:Generator_ColumnPropNameInTable="FILEIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="BUILDINGLEGALAREA" msdata:Caption="Suprafata totala din acte constructii " msprop:Generator_UserColumnName="BUILDINGLEGALAREA" msprop:Generator_ColumnVarNameInTable="columnBUILDINGLEGALAREA" msprop:Generator_ColumnPropNameInRow="BUILDINGLEGALAREA" msprop:Generator_ColumnPropNameInTable="BUILDINGLEGALAREAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TAXVALUE" msdata:Caption="Valoare de impozitare " msprop:Generator_UserColumnName="TAXVALUE" msprop:Generator_ColumnPropNameInRow="TAXVALUE" msprop:Generator_ColumnVarNameInTable="columnTAXVALUE" msprop:Generator_ColumnPropNameInTable="TAXVALUEColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="NOTES" msdata:Caption="Comentarii/Mentiuni teren" msprop:Generator_UserColumnName="NOTES" msprop:Generator_ColumnPropNameInRow="NOTES" msprop:Generator_ColumnVarNameInTable="columnNOTES" msprop:Generator_ColumnPropNameInTable="NOTESColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ENCLOSED" msprop:Generator_UserColumnName="ENCLOSED" msprop:Generator_ColumnVarNameInTable="columnENCLOSED" msprop:Generator_ColumnPropNameInRow="ENCLOSED" msprop:Generator_ColumnPropNameInTable="ENCLOSEDColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="COAREA" msprop:Generator_UserColumnName="COAREA" msprop:Generator_ColumnVarNameInTable="columnCOAREA" msprop:Generator_ColumnPropNameInRow="COAREA" msprop:Generator_ColumnPropNameInTable="COAREAColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="E2IDENTIFIER" msdata:Caption="Identificatorul electronic apartinand sistemului ETERRA" msprop:Generator_UserColumnName="E2IDENTIFIER" msprop:Generator_ColumnVarNameInTable="columnE2IDENTIFIER" msprop:Generator_ColumnPropNameInRow="E2IDENTIFIER" msprop:Generator_ColumnPropNameInTable="E2IDENTIFIERColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PAPERCADNO" msdata:Caption="Numar cadastral hartie " msprop:Generator_UserColumnName="PAPERCADNO" msprop:Generator_ColumnVarNameInTable="columnPAPERCADNO" msprop:Generator_ColumnPropNameInRow="PAPERCADNO" msprop:Generator_ColumnPropNameInTable="PAPERCADNOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PAPERLBNO" msdata:Caption="Numar carte funciara hartie" msprop:Generator_UserColumnName="PAPERLBNO" msprop:Generator_ColumnVarNameInTable="columnPAPERLBNO" msprop:Generator_ColumnPropNameInRow="PAPERLBNO" msprop:Generator_ColumnPropNameInTable="PAPERLBNOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TOPONO" msdata:Caption="Numar topografic" msprop:Generator_UserColumnName="TOPONO" msprop:Generator_ColumnVarNameInTable="columnTOPONO" msprop:Generator_ColumnPropNameInRow="TOPONO" msprop:Generator_ColumnPropNameInTable="TOPONOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CADGENNO" msdata:Caption="Numar cadastru general " msprop:Generator_UserColumnName="CADGENNO" msprop:Generator_ColumnVarNameInTable="columnCADGENNO" msprop:Generator_ColumnPropNameInRow="CADGENNO" msprop:Generator_ColumnPropNameInTable="CADGENNOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="IU" msprop:Generator_UserTableName="IU" msprop:Generator_RowDeletedName="IURowDeleted" msprop:Generator_RowChangedName="IURowChanged" msprop:Generator_RowClassName="IURow" msprop:Generator_RowChangingName="IURowChanging" msprop:Generator_RowEvArgName="IURowChangeEvent" msprop:Generator_RowEvHandlerName="IURowChangeEventHandler" msprop:Generator_TableClassName="IUDataTable" msprop:Generator_TableVarName="tableIU" msprop:Generator_RowDeletingName="IURowDeleting" msprop:Generator_TablePropName="IU">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IUID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:Caption="ID-ul unic al unitatii individuale " msprop:Generator_UserColumnName="IUID" msprop:Generator_ColumnPropNameInRow="IUID" msprop:Generator_ColumnVarNameInTable="columnIUID" msprop:Generator_ColumnPropNameInTable="IUIDColumn" type="xs:int" />
+              <xs:element name="BUILDINGID" msdata:Caption="ID-ul constructiei de care apartine unitatea individuala " msprop:Generator_UserColumnName="BUILDINGID" msprop:Generator_ColumnPropNameInRow="BUILDINGID" msprop:Generator_ColumnVarNameInTable="columnBUILDINGID" msprop:Generator_ColumnPropNameInTable="BUILDINGIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDENTIFIER" msdata:Caption="Identificator apartament " msprop:Generator_UserColumnName="IDENTIFIER" msprop:Generator_ColumnPropNameInRow="IDENTIFIER" msprop:Generator_ColumnVarNameInTable="columnIDENTIFIER" msprop:Generator_ColumnPropNameInTable="IDENTIFIERColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SECTION" msdata:Caption="Tronsonul blocului de care apartine unitatea individuala " msprop:Generator_UserColumnName="SECTION" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnSECTION" msprop:Generator_ColumnPropNameInTable="SECTIONColumn" msprop:Generator_ColumnPropNameInRow="SECTION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="APNO" msdata:Caption="Numar apartament/denumire al unitatii individuale " msprop:Generator_UserColumnName="APNO" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="APNO" msprop:Generator_ColumnPropNameInTable="APNOColumn" msprop:Generator_ColumnVarNameInTable="columnAPNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ENTRY" msdata:Caption="Scara blocului " msprop:Generator_UserColumnName="ENTRY" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="ENTRY" msprop:Generator_ColumnPropNameInTable="ENTRYColumn" msprop:Generator_ColumnVarNameInTable="columnENTRY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MEASUREDAREA" msdata:Caption="Suprafata masurata " msprop:Generator_UserColumnName="MEASUREDAREA" msprop:Generator_ColumnPropNameInRow="MEASUREDAREA" msprop:Generator_ColumnVarNameInTable="columnMEASUREDAREA" msprop:Generator_ColumnPropNameInTable="MEASUREDAREAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TOTALAREA" msdata:Caption="Suprafata utila " msprop:Generator_UserColumnName="TOTALAREA" msprop:Generator_ColumnPropNameInRow="TOTALAREA" msprop:Generator_ColumnVarNameInTable="columnTOTALAREA" msprop:Generator_ColumnPropNameInTable="TOTALAREAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="LANDINDIVISIONAREA" msdata:Caption="Valoare cota teren indiviza " msprop:Generator_UserColumnName="LANDINDIVISIONAREA" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnLANDINDIVISIONAREA" msprop:Generator_ColumnPropNameInTable="LANDINDIVISIONAREAColumn" msprop:Generator_ColumnPropNameInRow="LANDINDIVISIONAREA" type="xs:string" minOccurs="0" />
+              <xs:element name="COMMONPARTSAREA" msdata:Caption="Valoare cota parti comune " msprop:Generator_UserColumnName="COMMONPARTSAREA" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnCOMMONPARTSAREA" msprop:Generator_ColumnPropNameInTable="COMMONPARTSAREAColumn" msprop:Generator_ColumnPropNameInRow="COMMONPARTSAREA" type="xs:string" minOccurs="0" />
+              <xs:element name="NOTES" msdata:Caption="Comentarii/Mentiuni unitate individuala " msprop:Generator_UserColumnName="NOTES" msprop:Generator_ColumnPropNameInRow="NOTES" msprop:Generator_ColumnVarNameInTable="columnNOTES" msprop:Generator_ColumnPropNameInTable="NOTESColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FLOOR" msdata:Caption="Etaj " msprop:Generator_UserColumnName="FLOOR" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="FLOOR" msprop:Generator_ColumnPropNameInTable="FLOORColumn" msprop:Generator_ColumnVarNameInTable="columnFLOOR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LANDDIVISIONTYPE" msdata:Caption="Tip cota teren indiviza (Dictionar)" msprop:Generator_UserColumnName="LANDDIVISIONTYPE" msprop:Generator_ColumnPropNameInRow="LANDDIVISIONTYPE" msprop:Generator_ColumnVarNameInTable="columnLANDDIVISIONTYPE" msprop:Generator_ColumnPropNameInTable="LANDDIVISIONTYPEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="COMMONPARTSTYPE" msdata:Caption="Tip cota parti comune (Dictionar)" msprop:Generator_UserColumnName="COMMONPARTSTYPE" msprop:Generator_ColumnPropNameInRow="COMMONPARTSTYPE" msprop:Generator_ColumnVarNameInTable="columnCOMMONPARTSTYPE" msprop:Generator_ColumnPropNameInTable="COMMONPARTSTYPEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ROOMNO" msdata:Caption="Numar Camere" msprop:Generator_UserColumnName="ROOMNO" msprop:Generator_ColumnVarNameInTable="columnROOMNO" msprop:Generator_ColumnPropNameInRow="ROOMNO" msprop:Generator_ColumnPropNameInTable="ROOMNOColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="E2IDENTIFIER" msdata:Caption="Identificatorul electronic apartinand sistemului ETERRA" msprop:Generator_UserColumnName="E2IDENTIFIER" msprop:Generator_ColumnVarNameInTable="columnE2IDENTIFIER" msprop:Generator_ColumnPropNameInRow="E2IDENTIFIER" msprop:Generator_ColumnPropNameInTable="E2IDENTIFIERColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PAPERCADNO" msdata:Caption="Numar cadastral hartie " msprop:Generator_UserColumnName="PAPERCADNO" msprop:Generator_ColumnVarNameInTable="columnPAPERCADNO" msprop:Generator_ColumnPropNameInRow="PAPERCADNO" msprop:Generator_ColumnPropNameInTable="PAPERCADNOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PAPERLBNO" msdata:Caption="Numar carte funciara hartie" msprop:Generator_UserColumnName="PAPERLBNO" msprop:Generator_ColumnVarNameInTable="columnPAPERLBNO" msprop:Generator_ColumnPropNameInRow="PAPERLBNO" msprop:Generator_ColumnPropNameInTable="PAPERLBNOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TOPONO" msdata:Caption="Numar topografic" msprop:Generator_UserColumnName="TOPONO" msprop:Generator_ColumnVarNameInTable="columnTOPONO" msprop:Generator_ColumnPropNameInRow="TOPONO" msprop:Generator_ColumnPropNameInTable="TOPONOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CADGENNO" msdata:Caption="Numar cadastru general " msprop:Generator_UserColumnName="CADGENNO" msprop:Generator_ColumnVarNameInTable="columnCADGENNO" msprop:Generator_ColumnPropNameInRow="CADGENNO" msprop:Generator_ColumnPropNameInTable="CADGENNOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Parcel" msprop:Generator_UserTableName="Parcel" msprop:Generator_RowDeletedName="ParcelRowDeleted" msprop:Generator_RowChangedName="ParcelRowChanged" msprop:Generator_RowClassName="ParcelRow" msprop:Generator_RowChangingName="ParcelRowChanging" msprop:Generator_RowEvArgName="ParcelRowChangeEvent" msprop:Generator_RowEvHandlerName="ParcelRowChangeEventHandler" msprop:Generator_TableClassName="ParcelDataTable" msprop:Generator_TableVarName="tableParcel" msprop:Generator_RowDeletingName="ParcelRowDeleting" msprop:Generator_TablePropName="Parcel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PARCELID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:Caption="ID-ul unic al parcelei " msprop:Generator_UserColumnName="PARCELID" msprop:Generator_ColumnPropNameInRow="PARCELID" msprop:Generator_ColumnVarNameInTable="columnPARCELID" msprop:Generator_ColumnPropNameInTable="PARCELIDColumn" type="xs:int" />
+              <xs:element name="LANDID" msdata:Caption="ID-ul terenului de care apartine parcela " msprop:Generator_UserColumnName="LANDID" msprop:Generator_ColumnPropNameInRow="LANDID" msprop:Generator_ColumnVarNameInTable="columnLANDID" msprop:Generator_ColumnPropNameInTable="LANDIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NUMBER" msdata:Caption="Numar parcela " msprop:Generator_UserColumnName="NUMBER" msprop:Generator_ColumnPropNameInRow="NUMBER" msprop:Generator_ColumnVarNameInTable="columnNUMBER" msprop:Generator_ColumnPropNameInTable="NUMBERColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MEASUREDAREA" msdata:Caption="Suprafata masurata parcela " msprop:Generator_UserColumnName="MEASUREDAREA" msprop:Generator_ColumnPropNameInRow="MEASUREDAREA" msprop:Generator_ColumnVarNameInTable="columnMEASUREDAREA" msprop:Generator_ColumnPropNameInTable="MEASUREDAREAColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="USECATEGORY" msdata:Caption="Tip categorie folosinta (Dictionar)" msprop:Generator_UserColumnName="USECATEGORY" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="USECATEGORY" msprop:Generator_ColumnPropNameInTable="USECATEGORYColumn" msprop:Generator_ColumnVarNameInTable="columnUSECATEGORY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INTRAVILAN" msdata:Caption="Valoare booleana Intravilan" msprop:Generator_UserColumnName="INTRAVILAN" msprop:Generator_ColumnPropNameInRow="INTRAVILAN" msprop:Generator_ColumnVarNameInTable="columnINTRAVILAN" msprop:Generator_ColumnPropNameInTable="INTRAVILANColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TAXVALUE" msdata:Caption="Valoare taxa de impozitare " msprop:Generator_UserColumnName="TAXVALUE" msprop:Generator_ColumnPropNameInRow="TAXVALUE" msprop:Generator_ColumnVarNameInTable="columnTAXVALUE" msprop:Generator_ColumnPropNameInTable="TAXVALUEColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TITLENO" msdata:Caption="Numar titlu de proprietate " msprop:Generator_UserColumnName="TITLENO" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="TITLENO" msprop:Generator_ColumnPropNameInTable="TITLENOColumn" msprop:Generator_ColumnVarNameInTable="columnTITLENO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LANDPLOTNO" msdata:Caption="Numar tarla " msprop:Generator_UserColumnName="LANDPLOTNO" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="LANDPLOTNO" msprop:Generator_ColumnPropNameInTable="LANDPLOTNOColumn" msprop:Generator_ColumnVarNameInTable="columnLANDPLOTNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PARCELNO" msdata:Caption="Numarul parcelei din tarla " msprop:Generator_UserColumnName="PARCELNO" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="PARCELNO" msprop:Generator_ColumnPropNameInTable="PARCELNOColumn" msprop:Generator_ColumnVarNameInTable="columnPARCELNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOTES" msdata:Caption="Comentarii/Mentiuni parcela " msprop:Generator_UserColumnName="NOTES" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnNOTES" msprop:Generator_ColumnPropNameInTable="NOTESColumn" msprop:Generator_ColumnPropNameInRow="NOTES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="E2IDENTIFIER" msdata:Caption="Identificatorul electronic apartinand sistemului ETERRA" msprop:Generator_UserColumnName="E2IDENTIFIER" msprop:Generator_ColumnVarNameInTable="columnE2IDENTIFIER" msprop:Generator_ColumnPropNameInRow="E2IDENTIFIER" msprop:Generator_ColumnPropNameInTable="E2IDENTIFIERColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PAPERCADNO" msdata:Caption="Numar cadastral hartie" msprop:Generator_UserColumnName="PAPERCADNO" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnPAPERCADNO" msprop:Generator_ColumnPropNameInTable="PAPERCADNOColumn" msprop:Generator_ColumnPropNameInRow="PAPERCADNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PAPERLBNO" msdata:Caption="Numar carte funciara hartie" msprop:Generator_UserColumnName="PAPERLBNO" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnPAPERLBNO" msprop:Generator_ColumnPropNameInTable="PAPERLBNOColumn" msprop:Generator_ColumnPropNameInRow="PAPERLBNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TOPONO" msdata:Caption="Numar topografic parcela" msprop:Generator_UserColumnName="TOPONO" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnTOPONO" msprop:Generator_ColumnPropNameInTable="TOPONOColumn" msprop:Generator_ColumnPropNameInRow="TOPONO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CADGENNO" msdata:Caption="Numar cadastru general " msprop:Generator_UserColumnName="CADGENNO" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnCADGENNO" msprop:Generator_ColumnPropNameInTable="CADGENNOColumn" msprop:Generator_ColumnPropNameInRow="CADGENNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Person" msprop:Generator_UserTableName="Person" msprop:Generator_RowDeletedName="PersonRowDeleted" msprop:Generator_RowChangedName="PersonRowChanged" msprop:Generator_RowClassName="PersonRow" msprop:Generator_RowChangingName="PersonRowChanging" msprop:Generator_RowEvArgName="PersonRowChangeEvent" msprop:Generator_RowEvHandlerName="PersonRowChangeEventHandler" msprop:Generator_TableClassName="PersonDataTable" msprop:Generator_TableVarName="tablePerson" msprop:Generator_RowDeletingName="PersonRowDeleting" msprop:Generator_TablePropName="Person">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PERSONID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:Caption="ID-ul unic al persoanei " msprop:Generator_UserColumnName="PERSONID" msprop:Generator_ColumnPropNameInRow="PERSONID" msprop:Generator_ColumnVarNameInTable="columnPERSONID" msprop:Generator_ColumnPropNameInTable="PERSONIDColumn" type="xs:int" />
+              <xs:element name="ADDRESSID" msdata:Caption="ID-ul adresei persoanei " msprop:Generator_UserColumnName="ADDRESSID" msprop:Generator_ColumnPropNameInRow="ADDRESSID" msprop:Generator_ColumnVarNameInTable="columnADDRESSID" msprop:Generator_ColumnPropNameInTable="ADDRESSIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="FIRSTNAME" msdata:Caption="Nume/Denumire persoana " msprop:Generator_UserColumnName="FIRSTNAME" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="FIRSTNAME" msprop:Generator_ColumnPropNameInTable="FIRSTNAMEColumn" msprop:Generator_ColumnVarNameInTable="columnFIRSTNAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ISPHYSICAL" msdata:Caption="Valoare booleana Persoana fizica" msprop:Generator_UserColumnName="ISPHYSICAL" msprop:Generator_ColumnPropNameInRow="ISPHYSICAL" msprop:Generator_ColumnVarNameInTable="columnISPHYSICAL" msprop:Generator_ColumnPropNameInTable="ISPHYSICALColumn" type="xs:boolean" default="true" minOccurs="0" />
+              <xs:element name="LASTNAME" msdata:Caption="Prenume persoana fizica " msprop:Generator_UserColumnName="LASTNAME" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="LASTNAME" msprop:Generator_ColumnPropNameInTable="LASTNAMEColumn" msprop:Generator_ColumnVarNameInTable="columnLASTNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DEFUNCT" msprop:Generator_UserColumnName="DEFUNCT" msprop:Generator_ColumnVarNameInTable="columnDEFUNCT" msprop:Generator_ColumnPropNameInRow="DEFUNCT" msprop:Generator_ColumnPropNameInTable="DEFUNCTColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IDENTIFIED" msprop:Generator_UserColumnName="IDENTIFIED" msprop:Generator_ColumnVarNameInTable="columnIDENTIFIED" msprop:Generator_ColumnPropNameInRow="IDENTIFIED" msprop:Generator_ColumnPropNameInTable="IDENTIFIEDColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IDCODE" msdata:Caption="Cod CNP/CUI " msprop:Generator_UserColumnName="IDCODE" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="IDCODE" msprop:Generator_ColumnPropNameInTable="IDCODEColumn" msprop:Generator_ColumnVarNameInTable="columnIDCODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PREVIOUSLASTNAME" msdata:Caption="Nume anterior persoana " msprop:Generator_UserColumnName="PREVIOUSLASTNAME" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="PREVIOUSLASTNAME" msprop:Generator_ColumnPropNameInTable="PREVIOUSLASTNAMEColumn" msprop:Generator_ColumnVarNameInTable="columnPREVIOUSLASTNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FATHERINITIAL" msdata:Caption="Initiala tatalui " msprop:Generator_UserColumnName="FATHERINITIAL" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="FATHERINITIAL" msprop:Generator_ColumnPropNameInTable="FATHERINITIALColumn" msprop:Generator_ColumnVarNameInTable="columnFATHERINITIAL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CITIZENSHIPCOUNTRY" msdata:Caption="Cetatenie (Dictionar)" msprop:Generator_UserColumnName="CITIZENSHIPCOUNTRY" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="CITIZENSHIPCOUNTRY" msprop:Generator_ColumnPropNameInTable="CITIZENSHIPCOUNTRYColumn" msprop:Generator_ColumnVarNameInTable="columnCITIZENSHIPCOUNTRY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDCARDTYPE" msdata:Caption="Tip act de identitate (Dictionar)" msprop:Generator_UserColumnName="IDCARDTYPE" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="IDCARDTYPE" msprop:Generator_ColumnPropNameInTable="IDCARDTYPEColumn" msprop:Generator_ColumnVarNameInTable="columnIDCARDTYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDCARDSERIALNO" msdata:Caption="Serie act de identitate" msprop:Generator_UserColumnName="IDCARDSERIALNO" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="IDCARDSERIALNO" msprop:Generator_ColumnPropNameInTable="IDCARDSERIALNOColumn" msprop:Generator_ColumnVarNameInTable="columnIDCARDSERIALNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDCARDNUMBER" msdata:Caption="Numar act de identitate " msprop:Generator_UserColumnName="IDCARDNUMBER" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="IDCARDNUMBER" msprop:Generator_ColumnPropNameInTable="IDCARDNUMBERColumn" msprop:Generator_ColumnVarNameInTable="columnIDCARDNUMBER" type="xs:string" minOccurs="0" />
+              <xs:element name="NOTES" msdata:Caption="Comentarii/Mentiuni " msprop:Generator_UserColumnName="NOTES" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="NOTES" msprop:Generator_ColumnPropNameInTable="NOTESColumn" msprop:Generator_ColumnVarNameInTable="columnNOTES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PHONE" msdata:Caption="Telefon " msprop:Generator_UserColumnName="PHONE" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnPHONE" msprop:Generator_ColumnPropNameInTable="PHONEColumn" msprop:Generator_ColumnPropNameInRow="PHONE" type="xs:string" minOccurs="0" />
+              <xs:element name="EMAIL" msdata:Caption="Email " msprop:Generator_UserColumnName="EMAIL" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnEMAIL" msprop:Generator_ColumnPropNameInTable="EMAILColumn" msprop:Generator_ColumnPropNameInRow="EMAIL" type="xs:string" minOccurs="0" />
+              <xs:element name="FILEID" msdata:Caption="ID-ul descrierii fisierului " msprop:Generator_UserColumnName="FILEID" msprop:Generator_ColumnVarNameInTable="columnFILEID" msprop:Generator_ColumnPropNameInRow="FILEID" msprop:Generator_ColumnPropNameInTable="FILEIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="REGISTRATIONID" msdata:Caption="ID-ul inregistrarii" msprop:Generator_UserColumnName="REGISTRATIONID" msprop:Generator_ColumnVarNameInTable="columnREGISTRATIONID" msprop:Generator_ColumnPropNameInRow="REGISTRATIONID" msprop:Generator_ColumnPropNameInTable="REGISTRATIONIDColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Points" msprop:Generator_UserTableName="Points" msprop:Generator_RowDeletedName="PointsRowDeleted" msprop:Generator_RowChangedName="PointsRowChanged" msprop:Generator_RowClassName="PointsRow" msprop:Generator_RowChangingName="PointsRowChanging" msprop:Generator_RowEvArgName="PointsRowChangeEvent" msprop:Generator_RowEvHandlerName="PointsRowChangeEventHandler" msprop:Generator_TableClassName="PointsDataTable" msprop:Generator_TableVarName="tablePoints" msprop:Generator_RowDeletingName="PointsRowDeleting" msprop:Generator_TablePropName="Points">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="POINTID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:Caption="ID-ul unic al punctului " msprop:Generator_UserColumnName="POINTID" msprop:Generator_ColumnPropNameInRow="POINTID" msprop:Generator_ColumnVarNameInTable="columnPOINTID" msprop:Generator_ColumnPropNameInTable="POINTIDColumn" type="xs:int" />
+              <xs:element name="IMMOVABLEID" msdata:Caption="ID-ul terenului de care apartine punctul " msprop:Generator_UserColumnName="IMMOVABLEID" msprop:Generator_ColumnPropNameInRow="IMMOVABLEID" msprop:Generator_ColumnVarNameInTable="columnIMMOVABLEID" msprop:Generator_ColumnPropNameInTable="IMMOVABLEIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="BUILDINGID" msdata:Caption="ID-ul constructiei de care apartine punctul " msprop:Generator_UserColumnName="BUILDINGID" msprop:Generator_ColumnPropNameInRow="BUILDINGID" msprop:Generator_ColumnVarNameInTable="columnBUILDINGID" msprop:Generator_ColumnPropNameInTable="BUILDINGIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NO" msdata:Caption="Numar punct " msprop:Generator_UserColumnName="NO" msprop:Generator_ColumnPropNameInRow="NO" msprop:Generator_ColumnVarNameInTable="columnNO" msprop:Generator_ColumnPropNameInTable="NOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="X" msdata:Caption="Coordonata X a punctului " msprop:Generator_UserColumnName="X" msprop:Generator_ColumnPropNameInRow="X" msprop:Generator_ColumnVarNameInTable="columnX" msprop:Generator_ColumnPropNameInTable="XColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Y" msdata:Caption="Coordonata Y a punctului " msprop:Generator_UserColumnName="Y" msprop:Generator_ColumnPropNameInRow="Y" msprop:Generator_ColumnVarNameInTable="columnY" msprop:Generator_ColumnPropNameInTable="YColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Registration" msprop:Generator_UserTableName="Registration" msprop:Generator_RowDeletedName="RegistrationRowDeleted" msprop:Generator_RowChangedName="RegistrationRowChanged" msprop:Generator_RowClassName="RegistrationRow" msprop:Generator_RowChangingName="RegistrationRowChanging" msprop:Generator_RowEvArgName="RegistrationRowChangeEvent" msprop:Generator_RowEvHandlerName="RegistrationRowChangeEventHandler" msprop:Generator_TableClassName="RegistrationDataTable" msprop:Generator_TableVarName="tableRegistration" msprop:Generator_RowDeletingName="RegistrationRowDeleting" msprop:Generator_TablePropName="Registration">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="REGISTRATIONID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:Caption="ID-ul unic al inscrierii" msprop:Generator_UserColumnName="REGISTRATIONID" msprop:Generator_ColumnVarNameInTable="columnREGISTRATIONID" msprop:Generator_ColumnPropNameInRow="REGISTRATIONID" msprop:Generator_ColumnPropNameInTable="REGISTRATIONIDColumn" type="xs:int" />
+              <xs:element name="REGISTRATIONTYPE" msdata:Caption="Tip Inscriere (Dictionar)" msprop:Generator_UserColumnName="REGISTRATIONTYPE" msprop:Generator_ColumnVarNameInTable="columnREGISTRATIONTYPE" msprop:Generator_ColumnPropNameInRow="REGISTRATIONTYPE" msprop:Generator_ColumnPropNameInTable="REGISTRATIONTYPEColumn" type="xs:string" />
+              <xs:element name="RIGHTTYPE" msdata:Caption="Tip Drept (Dictionar)" msprop:Generator_UserColumnName="RIGHTTYPE" msprop:Generator_ColumnVarNameInTable="columnRIGHTTYPE" msprop:Generator_ColumnPropNameInRow="RIGHTTYPE" msprop:Generator_ColumnPropNameInTable="RIGHTTYPEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RIGHTCOMMENT" msdata:Caption="Detalii suplimentare legate de inscrierea unui drept" msprop:Generator_UserColumnName="RIGHTCOMMENT" msprop:Generator_ColumnVarNameInTable="columnRIGHTCOMMENT" msprop:Generator_ColumnPropNameInRow="RIGHTCOMMENT" msprop:Generator_ColumnPropNameInTable="RIGHTCOMMENTColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOTES" msdata:Caption="Textul notei in cazul in care tipul inscrierii este nota." msprop:Generator_UserColumnName="NOTES" msprop:Generator_ColumnVarNameInTable="columnNOTES" msprop:Generator_ColumnPropNameInRow="NOTES" msprop:Generator_ColumnPropNameInTable="NOTESColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DEEDID" msdata:Caption="ID-ul actului in baza caruia se face inscrierea" msprop:Generator_UserColumnName="DEEDID" msprop:Generator_ColumnVarNameInTable="columnDEEDID" msprop:Generator_ColumnPropNameInRow="DEEDID" msprop:Generator_ColumnPropNameInTable="DEEDIDColumn" type="xs:int" />
+              <xs:element name="TITLE" msdata:Caption="Mod Dobandire al dreptului (Dictionar)" msprop:Generator_UserColumnName="TITLE" msprop:Generator_ColumnVarNameInTable="columnTITLE" msprop:Generator_ColumnPropNameInRow="TITLE" msprop:Generator_ColumnPropNameInTable="TITLEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QUOTATYPE" msdata:Caption="Tip Cota" msprop:Generator_UserColumnName="QUOTATYPE" msprop:Generator_ColumnVarNameInTable="columnQUOTATYPE" msprop:Generator_ColumnPropNameInRow="QUOTATYPE" msprop:Generator_ColumnPropNameInTable="QUOTATYPEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INITIALQUOTA" msdata:Caption="Cota initiala " msprop:Generator_UserColumnName="INITIALQUOTA" msprop:Generator_ColumnVarNameInTable="columnINITIALQUOTA" msprop:Generator_ColumnPropNameInRow="INITIALQUOTA" msprop:Generator_ColumnPropNameInTable="INITIALQUOTAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACTUALQUOTA" msdata:Caption="Cota Actuala " msprop:Generator_UserColumnName="ACTUALQUOTA" msprop:Generator_ColumnVarNameInTable="columnACTUALQUOTA" msprop:Generator_ColumnPropNameInRow="ACTUALQUOTA" msprop:Generator_ColumnPropNameInTable="ACTUALQUOTAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VALUECURRENCY" msdata:Caption="Tip moneda " msprop:Generator_UserColumnName="VALUECURRENCY" msprop:Generator_ColumnVarNameInTable="columnVALUECURRENCY" msprop:Generator_ColumnPropNameInRow="VALUECURRENCY" msprop:Generator_ColumnPropNameInTable="VALUECURRENCYColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VALUEAMOUNT" msdata:Caption="Valoare in Moneda " msprop:Generator_UserColumnName="VALUEAMOUNT" msprop:Generator_ColumnVarNameInTable="columnVALUEAMOUNT" msprop:Generator_ColumnPropNameInRow="VALUEAMOUNT" msprop:Generator_ColumnPropNameInTable="VALUEAMOUNTColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COMMENTS" msdata:Caption="Observatii " msprop:Generator_UserColumnName="COMMENTS" msprop:Generator_ColumnVarNameInTable="columnCOMMENTS" msprop:Generator_ColumnPropNameInRow="COMMENTS" msprop:Generator_ColumnPropNameInTable="COMMENTSColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LBPARTNO" msdata:Caption="Partea cartii funciare in care se va face inscrierea (2 sau 3)" msprop:Generator_UserColumnName="LBPARTNO" msprop:Generator_ColumnVarNameInTable="columnLBPARTNO" msprop:Generator_ColumnPropNameInRow="LBPARTNO" msprop:Generator_ColumnPropNameInTable="LBPARTNOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="POSITION" msdata:Caption="Nr. pozitie din partea funciara in care se va face inscrierea" msprop:Generator_UserColumnName="POSITION" msprop:Generator_ColumnVarNameInTable="columnPOSITION" msprop:Generator_ColumnPropNameInRow="POSITION" msprop:Generator_ColumnPropNameInTable="POSITIONColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="APPNO" msdata:Caption="Numarul cererii in baza careia s-a facut inscrierea" msprop:Generator_UserColumnName="APPNO" msprop:Generator_ColumnVarNameInTable="columnAPPNO" msprop:Generator_ColumnPropNameInRow="APPNO" msprop:Generator_ColumnPropNameInTable="APPNOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="APPDATE" msdata:Caption="Data cererii in baza careia s-a facut inscrirea" msprop:Generator_UserColumnName="APPDATE" msprop:Generator_ColumnVarNameInTable="columnAPPDATE" msprop:Generator_ColumnPropNameInRow="APPDATE" msprop:Generator_ColumnPropNameInTable="APPDATEColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RegistrationXEntity" msprop:Generator_UserTableName="RegistrationXEntity" msprop:Generator_RowDeletedName="RegistrationXEntityRowDeleted" msprop:Generator_RowChangedName="RegistrationXEntityRowChanged" msprop:Generator_RowClassName="RegistrationXEntityRow" msprop:Generator_RowChangingName="RegistrationXEntityRowChanging" msprop:Generator_RowEvArgName="RegistrationXEntityRowChangeEvent" msprop:Generator_RowEvHandlerName="RegistrationXEntityRowChangeEventHandler" msprop:Generator_TableClassName="RegistrationXEntityDataTable" msprop:Generator_TableVarName="tableRegistrationXEntity" msprop:Generator_RowDeletingName="RegistrationXEntityRowDeleting" msprop:Generator_TablePropName="RegistrationXEntity">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="REGISTRATIONXENTITYID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msdata:Caption="ID-ul unic al legaturii dintre inregistrare si entitate" msprop:Generator_UserColumnName="REGISTRATIONXENTITYID" msprop:Generator_ColumnVarNameInTable="columnREGISTRATIONXENTITYID" msprop:Generator_ColumnPropNameInRow="REGISTRATIONXENTITYID" msprop:Generator_ColumnPropNameInTable="REGISTRATIONXENTITYIDColumn" type="xs:int" />
+              <xs:element name="REGISTRATIONID" msdata:Caption="ID-ul inregistrarii" msprop:Generator_UserColumnName="REGISTRATIONID" msprop:Generator_ColumnVarNameInTable="columnREGISTRATIONID" msprop:Generator_ColumnPropNameInRow="REGISTRATIONID" msprop:Generator_ColumnPropNameInTable="REGISTRATIONIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="LANDID" msdata:Caption="ID-ul terenului la care se refera inregistrarea" msprop:Generator_UserColumnName="LANDID" msprop:Generator_ColumnVarNameInTable="columnLANDID" msprop:Generator_ColumnPropNameInRow="LANDID" msprop:Generator_ColumnPropNameInTable="LANDIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="BUILDINGID" msdata:Caption="ID-ul constructiei la care se refera inregistrarea" msprop:Generator_UserColumnName="BUILDINGID" msprop:Generator_ColumnVarNameInTable="columnBUILDINGID" msprop:Generator_ColumnPropNameInRow="BUILDINGID" msprop:Generator_ColumnPropNameInTable="BUILDINGIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IUID" msdata:Caption="ID-ul unitatii individuale la care se refera inregistrarea" msprop:Generator_UserColumnName="IUID" msprop:Generator_ColumnVarNameInTable="columnIUID" msprop:Generator_ColumnPropNameInRow="IUID" msprop:Generator_ColumnPropNameInTable="IUIDColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Contested" msprop:Generator_UserTableName="Contested" msprop:Generator_RowDeletedName="ContestedRowDeleted" msprop:Generator_RowChangedName="ContestedRowChanged" msprop:Generator_RowClassName="ContestedRow" msprop:Generator_RowChangingName="ContestedRowChanging" msprop:Generator_RowEvArgName="ContestedRowChangeEvent" msprop:Generator_RowEvHandlerName="ContestedRowChangeEventHandler" msprop:Generator_TableClassName="ContestedDataTable" msprop:Generator_TableVarName="tableContested" msprop:Generator_RowDeletingName="ContestedRowDeleting" msprop:Generator_TablePropName="Contested">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CONTESTEDID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_UserColumnName="CONTESTEDID" msprop:Generator_ColumnVarNameInTable="columnCONTESTEDID" msprop:Generator_ColumnPropNameInRow="CONTESTEDID" msprop:Generator_ColumnPropNameInTable="CONTESTEDIDColumn" type="xs:int" />
+              <xs:element name="CONTESTEDNUMBER" msprop:Generator_UserColumnName="CONTESTEDNUMBER" msprop:Generator_ColumnVarNameInTable="columnCONTESTEDNUMBER" msprop:Generator_ColumnPropNameInRow="CONTESTEDNUMBER" msprop:Generator_ColumnPropNameInTable="CONTESTEDNUMBERColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CONTESTEDDATE" msprop:Generator_UserColumnName="CONTESTEDDATE" msprop:Generator_ColumnVarNameInTable="columnCONTESTEDDATE" msprop:Generator_ColumnPropNameInRow="CONTESTEDDATE" msprop:Generator_ColumnPropNameInTable="CONTESTEDDATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SOLUTIONNUMBER" msprop:Generator_UserColumnName="SOLUTIONNUMBER" msprop:Generator_ColumnVarNameInTable="columnSOLUTIONNUMBER" msprop:Generator_ColumnPropNameInRow="SOLUTIONNUMBER" msprop:Generator_ColumnPropNameInTable="SOLUTIONNUMBERColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SOLUTIONDATE" msprop:Generator_UserColumnName="SOLUTIONDATE" msprop:Generator_ColumnVarNameInTable="columnSOLUTIONDATE" msprop:Generator_ColumnPropNameInRow="SOLUTIONDATE" msprop:Generator_ColumnPropNameInTable="SOLUTIONDATEColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ContestedxEntity">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CONTESTEDXENTITYID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" type="xs:int" />
+              <xs:element name="CONTESTEDID" type="xs:int" minOccurs="0" />
+              <xs:element name="LANDID" type="xs:int" minOccurs="0" />
+              <xs:element name="BUILDINGID" type="xs:int" minOccurs="0" />
+              <xs:element name="IUID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Address_UQConstraint" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Address" />
+      <xs:field xpath="ADDRESSID" />
+    </xs:unique>
+    <xs:unique name="Building_UQConstraint" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Building" />
+      <xs:field xpath="BUILDINGID" />
+    </xs:unique>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//BuildingCommonParts" />
+      <xs:field xpath="BUILDINGCOMMONPARTID" />
+    </xs:unique>
+    <xs:unique name="Deed_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Deed" />
+      <xs:field xpath="DEEDID" />
+    </xs:unique>
+    <xs:unique name="FileDescription_UQConstraint" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//FileDescription" />
+      <xs:field xpath="FILEID" />
+    </xs:unique>
+    <xs:unique name="Land_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Land" />
+      <xs:field xpath="LANDID" />
+    </xs:unique>
+    <xs:unique name="IU_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//IU" />
+      <xs:field xpath="IUID" />
+    </xs:unique>
+    <xs:unique name="Parcel_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Parcel" />
+      <xs:field xpath="PARCELID" />
+    </xs:unique>
+    <xs:unique name="Person_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Person" />
+      <xs:field xpath="PERSONID" />
+    </xs:unique>
+    <xs:unique name="Points_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Points" />
+      <xs:field xpath="POINTID" />
+    </xs:unique>
+    <xs:unique name="Registration_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Registration" />
+      <xs:field xpath="REGISTRATIONID" />
+    </xs:unique>
+    <xs:unique name="RegistrationXEntity_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//RegistrationXEntity" />
+      <xs:field xpath="REGISTRATIONXENTITYID" />
+    </xs:unique>
+    <xs:unique name="Contested_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Contested" />
+      <xs:field xpath="CONTESTEDID" />
+    </xs:unique>
+    <xs:unique name="ContestedxEntity_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ContestedxEntity" />
+      <xs:field xpath="CONTESTEDXENTITYID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_Building_IndividualUnit" msdata:parent="Building" msdata:child="IU" msdata:parentkey="BUILDINGID" msdata:childkey="BUILDINGID" msprop:Generator_UserRelationName="FK_Building_IndividualUnit" msprop:Generator_RelationVarName="relationFK_Building_IndividualUnit" msprop:Generator_UserChildTable="IU" msprop:Generator_UserParentTable="Building" msprop:Generator_ParentPropName="BuildingRow" msprop:Generator_ChildPropName="GetIURows" />
+      <msdata:Relationship name="FK_Building_BuildingCommonParts" msdata:parent="Building" msdata:child="BuildingCommonParts" msdata:parentkey="BUILDINGID" msdata:childkey="BUILDINGID" msprop:Generator_UserRelationName="FK_Building_BuildingCommonParts" msprop:Generator_RelationVarName="relationFK_Building_BuildingCommonParts" msprop:Generator_UserChildTable="BuildingCommonParts" msprop:Generator_UserParentTable="Building" msprop:Generator_ParentPropName="BuildingRow" msprop:Generator_ChildPropName="GetBuildingCommonPartsRows" />
+      <msdata:Relationship name="FK_Immovable_Building" msdata:parent="Land" msdata:child="Building" msdata:parentkey="LANDID" msdata:childkey="LANDID" msprop:Generator_UserRelationName="FK_Immovable_Building" msprop:Generator_RelationVarName="relationFK_Immovable_Building" msprop:Generator_UserChildTable="Building" msprop:Generator_UserParentTable="Land" msprop:Generator_ParentPropName="LandRow" msprop:Generator_ChildPropName="GetBuildingRows" />
+      <msdata:Relationship name="FK_FileDescription_Land" msdata:parent="FileDescription" msdata:child="Land" msdata:parentkey="FILEID" msdata:childkey="FILEID" msprop:Generator_UserRelationName="FK_FileDescription_Land" msprop:Generator_RelationVarName="relationFK_FileDescription_Land" msprop:Generator_UserChildTable="Land" msprop:Generator_UserParentTable="FileDescription" msprop:Generator_ParentPropName="FileDescriptionRow" msprop:Generator_ChildPropName="GetLandRows" />
+      <msdata:Relationship name="FK_Address_Building" msdata:parent="Address" msdata:child="Building" msdata:parentkey="ADDRESSID" msdata:childkey="ADDRESSID" msprop:Generator_UserRelationName="FK_Address_Building" msprop:Generator_RelationVarName="relationFK_Address_Building" msprop:Generator_UserChildTable="Building" msprop:Generator_UserParentTable="Address" msprop:Generator_ParentPropName="AddressRow" msprop:Generator_ChildPropName="GetBuildingRows" />
+      <msdata:Relationship name="FK_Building_Points" msdata:parent="Building" msdata:child="Points" msdata:parentkey="BUILDINGID" msdata:childkey="BUILDINGID" msprop:Generator_UserRelationName="FK_Building_Points" msprop:Generator_RelationVarName="relationFK_Building_Points" msprop:Generator_UserChildTable="Points" msprop:Generator_UserParentTable="Building" msprop:Generator_ParentPropName="BuildingRow" msprop:Generator_ChildPropName="GetPointsRows" />
+      <msdata:Relationship name="FK_Immovable_Points" msdata:parent="Land" msdata:child="Points" msdata:parentkey="LANDID" msdata:childkey="IMMOVABLEID" msprop:Generator_UserRelationName="FK_Immovable_Points" msprop:Generator_RelationVarName="relationFK_Immovable_Points" msprop:Generator_UserChildTable="Points" msprop:Generator_UserParentTable="Land" msprop:Generator_ParentPropName="LandRow" msprop:Generator_ChildPropName="GetPointsRows" />
+      <msdata:Relationship name="FK_Address_Immovable" msdata:parent="Address" msdata:child="Land" msdata:parentkey="ADDRESSID" msdata:childkey="ADDRESSID" msprop:Generator_UserRelationName="FK_Address_Immovable" msprop:Generator_RelationVarName="relationFK_Address_Immovable" msprop:Generator_UserChildTable="Land" msprop:Generator_UserParentTable="Address" msprop:Generator_ParentPropName="AddressRow" msprop:Generator_ChildPropName="GetLandRows" />
+      <msdata:Relationship name="FK_Immovable_Parcel" msdata:parent="Land" msdata:child="Parcel" msdata:parentkey="LANDID" msdata:childkey="LANDID" msprop:Generator_UserRelationName="FK_Immovable_Parcel" msprop:Generator_RelationVarName="relationFK_Immovable_Parcel" msprop:Generator_UserChildTable="Parcel" msprop:Generator_UserParentTable="Land" msprop:Generator_ParentPropName="LandRow" msprop:Generator_ChildPropName="GetParcelRows" />
+      <msdata:Relationship name="FK_Person_FileDescription" msdata:parent="FileDescription" msdata:child="Person" msdata:parentkey="FILEID" msdata:childkey="FILEID" msprop:Generator_UserRelationName="FK_Person_FileDescription" msprop:Generator_RelationVarName="relationFK_Person_FileDescription" msprop:Generator_UserChildTable="Person" msprop:Generator_UserParentTable="FileDescription" msprop:Generator_ParentPropName="FileDescriptionRow" msprop:Generator_ChildPropName="GetPersonRows" />
+      <msdata:Relationship name="FK_Address_Person" msdata:parent="Address" msdata:child="Person" msdata:parentkey="ADDRESSID" msdata:childkey="ADDRESSID" msprop:Generator_UserRelationName="FK_Address_Person" msprop:Generator_RelationVarName="relationFK_Address_Person" msprop:Generator_UserChildTable="Person" msprop:Generator_UserParentTable="Address" msprop:Generator_ParentPropName="AddressRow" msprop:Generator_ChildPropName="GetPersonRows" />
+      <msdata:Relationship name="FK_Deed_FileDescription" msdata:parent="FileDescription" msdata:child="Deed" msdata:parentkey="FILEID" msdata:childkey="FILEID" msprop:Generator_UserRelationName="FK_Deed_FileDescription" msprop:Generator_RelationVarName="relationFK_Deed_FileDescription" msprop:Generator_UserChildTable="Deed" msprop:Generator_UserParentTable="FileDescription" msprop:Generator_ParentPropName="FileDescriptionRow" msprop:Generator_ChildPropName="GetDeedRows" />
+      <msdata:Relationship name="FK_Land_RegistrationXEntity" msdata:parent="Land" msdata:child="RegistrationXEntity" msdata:parentkey="LANDID" msdata:childkey="LANDID" msprop:Generator_UserRelationName="FK_Land_RegistrationXEntity" msprop:Generator_RelationVarName="relationFK_Land_RegistrationXEntity" msprop:Generator_UserChildTable="RegistrationXEntity" msprop:Generator_UserParentTable="Land" msprop:Generator_ParentPropName="LandRow" msprop:Generator_ChildPropName="GetRegistrationXEntityRows" />
+      <msdata:Relationship name="FK_Building_InscrierexEntitate" msdata:parent="Building" msdata:child="RegistrationXEntity" msdata:parentkey="BUILDINGID" msdata:childkey="BUILDINGID" msprop:Generator_UserRelationName="FK_Building_InscrierexEntitate" msprop:Generator_RelationVarName="relationFK_Building_InscrierexEntitate" msprop:Generator_UserChildTable="RegistrationXEntity" msprop:Generator_UserParentTable="Building" msprop:Generator_ParentPropName="BuildingRow" msprop:Generator_ChildPropName="GetRegistrationXEntityRows" />
+      <msdata:Relationship name="FK_IU_RegistrationXEntity" msdata:parent="IU" msdata:child="RegistrationXEntity" msdata:parentkey="IUID" msdata:childkey="IUID" msprop:Generator_UserRelationName="FK_IU_RegistrationXEntity" msprop:Generator_RelationVarName="relationFK_IU_RegistrationXEntity" msprop:Generator_UserChildTable="RegistrationXEntity" msprop:Generator_UserParentTable="IU" msprop:Generator_ParentPropName="IURow" msprop:Generator_ChildPropName="GetRegistrationXEntityRows" />
+      <msdata:Relationship name="FK_Registration_RegistrationXEntity" msdata:parent="Registration" msdata:child="RegistrationXEntity" msdata:parentkey="REGISTRATIONID" msdata:childkey="REGISTRATIONID" msprop:Generator_UserRelationName="FK_Registration_RegistrationXEntity" msprop:Generator_RelationVarName="relationFK_Registration_RegistrationXEntity" msprop:Generator_UserChildTable="RegistrationXEntity" msprop:Generator_UserParentTable="Registration" msprop:Generator_ParentPropName="InscriereRow" msprop:Generator_ChildPropName="GetRegistrationXEntityRows" />
+      <msdata:Relationship name="FK_Deed_Registration" msdata:parent="Deed" msdata:child="Registration" msdata:parentkey="DEEDID" msdata:childkey="DEEDID" msprop:Generator_UserRelationName="FK_Deed_Registration" msprop:Generator_RelationVarName="relationFK_Deed_Registration" msprop:Generator_UserChildTable="Registration" msprop:Generator_UserParentTable="Deed" msprop:Generator_ParentPropName="DeedRow" msprop:Generator_ChildPropName="GetRegistrationRows" />
+      <msdata:Relationship name="FK_Registration_Person" msdata:parent="Registration" msdata:child="Person" msdata:parentkey="REGISTRATIONID" msdata:childkey="REGISTRATIONID" msprop:Generator_UserRelationName="FK_Registration_Person" msprop:Generator_RelationVarName="relationFK_Registration_Person" msprop:Generator_UserChildTable="Person" msprop:Generator_UserParentTable="Registration" msprop:Generator_ParentPropName="RegistrationRow" msprop:Generator_ChildPropName="GetPersonRows" />
+      <msdata:Relationship name="Contested_ContestedxEntity" msdata:parent="Contested" msdata:child="ContestedxEntity" msdata:parentkey="CONTESTEDID" msdata:childkey="CONTESTEDID" />
+      <msdata:Relationship name="IU_ContestedxEntity" msdata:parent="IU" msdata:child="ContestedxEntity" msdata:parentkey="IUID" msdata:childkey="IUID" />
+      <msdata:Relationship name="Building_ContestedxEntity" msdata:parent="Building" msdata:child="ContestedxEntity" msdata:parentkey="BUILDINGID" msdata:childkey="BUILDINGID" />
+      <msdata:Relationship name="Land_ContestedxEntity" msdata:parent="Land" msdata:child="ContestedxEntity" msdata:parentkey="LANDID" msdata:childkey="LANDID" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

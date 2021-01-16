@@ -37,7 +37,7 @@
             // 
             // btnImport
             // 
-            this.btnImport.Location = new System.Drawing.Point(109, 91);
+            this.btnImport.Location = new System.Drawing.Point(192, 91);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(281, 38);
             this.btnImport.TabIndex = 0;
@@ -49,9 +49,9 @@
             // 
             this.groupBox1.Controls.Add(this.rdb2);
             this.groupBox1.Controls.Add(this.rdb1);
-            this.groupBox1.Location = new System.Drawing.Point(114, 12);
+            this.groupBox1.Location = new System.Drawing.Point(122, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(270, 64);
+            this.groupBox1.Size = new System.Drawing.Size(420, 64);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -59,19 +59,20 @@
             // 
             this.rdb2.AutoSize = true;
             this.rdb2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdb2.Location = new System.Drawing.Point(284, 24);
+            this.rdb2.Location = new System.Drawing.Point(253, 24);
             this.rdb2.Name = "rdb2";
             this.rdb2.Size = new System.Drawing.Size(97, 17);
             this.rdb2.TabIndex = 1;
             this.rdb2.Text = "Excel to XML";
             this.rdb2.UseVisualStyleBackColor = true;
+            this.rdb2.CheckedChanged += new System.EventHandler(this.rdb2_CheckedChanged);
             // 
             // rdb1
             // 
             this.rdb1.AutoSize = true;
             this.rdb1.Checked = true;
             this.rdb1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdb1.Location = new System.Drawing.Point(101, 24);
+            this.rdb1.Location = new System.Drawing.Point(70, 24);
             this.rdb1.Name = "rdb1";
             this.rdb1.Size = new System.Drawing.Size(97, 17);
             this.rdb1.TabIndex = 0;
@@ -84,7 +85,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(498, 160);
+            this.ClientSize = new System.Drawing.Size(664, 160);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnImport);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

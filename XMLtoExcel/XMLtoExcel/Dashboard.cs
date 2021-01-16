@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
+using System.Xml.Schema;
 using ClosedXML.Excel;
 using ExcelDataReader;
 
@@ -18,7 +19,7 @@ namespace XMLtoExcel
     public partial class Dashboard : Form
     {
         string[] files;
-        DataSet FinalDataset;
+        Files.CGXML FinalDataset;
         public Dashboard()
         {
             InitializeComponent();
@@ -26,21 +27,31 @@ namespace XMLtoExcel
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            
+            //Files.CGXML gXML = new Files.CGXML();
+            //var str = gXML.Building.Columns["BUILDINGID"].Caption;
+
+            //FinalDataset = new Files.CGXML();
         }
 
 
         private void setFinalDataset()
         {
-            FinalDataset = new DataSet() { EnforceConstraints = false };
-            string path = $"{Application.StartupPath}\\Files\\Sample.xml";
-            string FileName = Path.GetFileNameWithoutExtension(path);
-            var xDocument = XDocument.Parse(File.ReadAllText(path, System.Text.Encoding.UTF8));
-            StringReader sr = new StringReader(xDocument.ToString());
-            DataSet XMLData = new DataSet();
-            XMLData.ReadXml(sr);
+            //FinalDataset = new DataSet() { EnforceConstraints = false };
+            //string path = $"{Application.StartupPath}\\Files\\Sample.xml";
+            //XmlTextReader reader = new XmlTextReader($"{Application.StartupPath}\\Files\\Sample.xsd");
+            //string FileName = Path.GetFileNameWithoutExtension(path);
+            //var xDocument = XDocument.Parse(File.ReadAllText(path, System.Text.Encoding.UTF8));
+            //StringReader sr = new StringReader(xDocument.ToString());
+            //DataSet XMLData = new DataSet();
+            //XMLData.ReadXml(sr);
 
-            FinalDataset = XMLData.Clone();
+            //FinalDataset = XMLData.Clone();
+            //foreach (XElement element in )
+            //{
+            //    Console.WriteLine(element);
+            //}
+
+            FinalDataset = new Files.CGXML() { EnforceConstraints = false };
 
             foreach (DataTable dt in FinalDataset.Tables)
             {
@@ -55,7 +66,6 @@ namespace XMLtoExcel
             {
                 setFinalDataset();
                 /*This Dataset is the main dataset to be extracted as excel*/
-                //DataSet MainXMLData = new DataSet();
                 if (files == null || files.Length < 1)
                 {
                     MessageBox.Show("Please Select Folder of XML Files");
@@ -71,60 +81,13 @@ namespace XMLtoExcel
                     DataSet XMLData = new DataSet();
                     //XMLData.ReadXml(path, XmlReadMode.InferSchema);
                     XMLData.ReadXml(sr);
-                    //if (rows == 0)
-                    //{
-                    //    /*Cloning the Dataset with what we get it from the XMLs*/
-                    //    MainXMLData = XMLData.Clone();
-
-                    //    foreach (DataTable dt in MainXMLData.Tables)
-                    //    {
-                    //        DataColumn Col = dt.Columns.Add("FileKaNo");
-                    //        Col.SetOrdinal(0);
-                    //    }
-
-                    //    //dataGridView1.Columns.Add("FileName", "FileName");
-                    //    //foreach (DataColumn dc in XMLData.Tables[0].Columns)
-                    //    //{
-                    //    //    dataGridView1.Columns.Add(dc.ColumnName, dc.ColumnName);
-                    //    //}
-                    //}
-                    //else
-                    //{
-                    //    var result = XMLData.Tables.Cast<DataTable>()
-                    //                            .Where(x => !MainXMLData.Tables.Cast<DataTable>().Any(y => y.TableName == x.TableName)).ToList();
-
-                    //    foreach (var list in result)
-                    //    {
-                    //        MainXMLData.Tables.Add(list.TableName);
-                    //    }
-
-                    //    foreach (DataTable dt in MainXMLData.Tables)
-                    //    {
-                    //        DataColumnCollection columns = dt.Columns;
-                    //        if (!columns.Contains("FileKaNo"))
-                    //        {
-                    //            DataColumn Col = dt.Columns.Add("FileKaNo");
-                    //            Col.SetOrdinal(0);
-                    //        }
-                    //    }
-                    //}
 
                     foreach (DataTable dt in FinalDataset.Tables)
                     {
                         if (XMLData.Tables.Contains(dt.TableName))
                         {
                             DataTable dataTable = XMLData.Tables[dt.TableName];
-                            //if (rows != 0)
-                            //{
-                            //    var result = dataTable.Columns.Cast<DataColumn>()
-                            //                        .Where(x => !dt.Columns.Cast<DataColumn>().Any(y => y.ColumnName == x.ColumnName)).ToList();
-
-                            //    foreach (var list in result)
-                            //    {
-                            //        dt.Columns.Add(list.ColumnName);
-                            //    }
-                            //}
-
+                    
                             foreach (DataRow dr in dataTable.Rows)
                             {
                                 DataRow dataRow = dt.NewRow();
@@ -355,30 +318,78 @@ namespace XMLtoExcel
                             //dataSet.Tables[tables.TableName].Rows.Add(dataRows);
                         }
 
-                        foreach (DataTable dt in dataSet.Tables)
+                        setFinalDataset();
+                        foreach (DataTable dt in FinalDataset.Tables)
+                        {
+                            if (dataSet.Tables.Contains(dt.TableName))
+                            {
+                                dataTable = dataSet.Tables[dt.TableName];
+
+                                foreach (DataRow dr in dataTable.Rows)
+                                {
+                                    DataRow dataRow = dt.NewRow();
+                                    foreach (DataColumn dc in dataTable.Columns)
+                                    {
+                                        if (dt.Columns.Contains(dc.ColumnName))
+                                            dataRow[dc.ColumnName] = dr[dc.ColumnName] == null ? "" : dr[dc.ColumnName];
+                                        else if (dt.Columns.Cast<DataColumn>().Any(x => x.Caption == dc.ColumnName))
+                                            dataRow[dt.Columns.Cast<DataColumn>().First(x => x.Caption == dc.ColumnName).ColumnName] = dr[dc.ColumnName] == null ? "" : dr[dc.ColumnName];
+                                    }
+                                    dt.Rows.Add(dataRow);
+                                }
+                            }
+                        }
+
+                        #region FinalDataset Trial
+                        //foreach (DataTable dt in FinalDataset.Tables)
+                        //{
+                        //    if (dataSet.Tables.Contains(dt.TableName))
+                        //    {
+                        //        dataTable = dataSet.Tables[dt.TableName];
+
+                        //        foreach (DataRow dr in dataTable.Rows)
+                        //        {
+                        //            DataRow dataRow = dt.NewRow();
+                        //            foreach (DataColumn dc in dataTable.Columns)
+                        //            {
+                        //                if (dt.Columns.Contains(dc.ColumnName))
+                        //                    dataRow[dc.ColumnName] = dr[dc.ColumnName] == null ? "" : dr[dc.ColumnName];
+                        //            }
+                        //            dt.Rows.Add(dataRow);
+                        //        }
+                        //    }
+                        //}
+                        #endregion
+                        foreach (DataTable dt in FinalDataset.Tables)
                         {
                             dt.Columns.Remove("FileKaNo");
-                            
-                            //foreach (DataRow row in dt.Rows)
-                            //{
-                            //    foreach (DataColumn c in dt.Columns)
-                            //    {
-                            //        if (row.IsNull(c))
-                            //        {
-                            //            //row[c] = string.Empty;
-                            //            row[c] = "";
-                            //        }
-                            //    }
-                            //}
-                            //dt.AcceptChanges();
                         }
+                        #region Removed
+                        //foreach (DataTable dt in dataSet.Tables)
+                        //{
+                        //    dt.Columns.Remove("FileKaNo");
+
+                        //    //foreach (DataRow row in dt.Rows)
+                        //    //{
+                        //    //    foreach (DataColumn c in dt.Columns)
+                        //    //    {
+                        //    //        if (row.IsNull(c))
+                        //    //        {
+                        //    //            //row[c] = string.Empty;
+                        //    //            row[c] = "";
+                        //    //        }
+                        //    //    }
+                        //    //}
+                        //    //dt.AcceptChanges();
+                        //}
                         //dataSet.WriteXml(fd.SelectedPath + @"\" + item + ".cgxml");
 
                         //System.IO.StreamWriter xmlSW = new System.IO.StreamWriter(fd.SelectedPath + @"\" + item + ".cgxml");
                         //dataSet.WriteXml(xmlSW);
                         //////xmlSW.Write(DatasetToString(dataSet));
                         //xmlSW.Close();
-                        DatasetToXML(dataSet, fd.SelectedPath, item);
+                        #endregion
+                        DatasetToXML(FinalDataset, fd.SelectedPath, item);
                     }
                     MessageBox.Show("XMLs Created Successfully", "XML DATA");
                 }
@@ -465,8 +476,20 @@ namespace XMLtoExcel
             }
             else
             {
-                 
+                OpenFileDialog fileDialog = new OpenFileDialog();
+                fileDialog.Title = "Select Excel File to Convert into XML Files";
+                fileDialog.DefaultExt = "xlsx";
+                fileDialog.Filter = "Excel Files|*.xlsx;*.xls";
+                if(fileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    ExcelToDataSet(fileDialog.FileName);
+                }
             }
+        }
+
+        private void rdb2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
