@@ -19,6 +19,7 @@ namespace XMLtoExcel
     public partial class Dashboard : Form
     {
         string[] files;
+        string UniqueFileNoColumn = "FileKaNo";
         Files.CGXML FinalDataset;
         public Dashboard()
         {
@@ -56,7 +57,7 @@ namespace XMLtoExcel
             foreach (DataTable dt in FinalDataset.Tables)
             {
                 dt.Constraints.Clear();
-                DataColumn Col = dt.Columns.Add("FileKaNo");
+                DataColumn Col = dt.Columns.Add(UniqueFileNoColumn);
                 Col.SetOrdinal(0);
             }
         }
@@ -91,7 +92,7 @@ namespace XMLtoExcel
                             foreach (DataRow dr in dataTable.Rows)
                             {
                                 DataRow dataRow = dt.NewRow();
-                                dataRow["FileKaNo"] = FileName;
+                                dataRow[UniqueFileNoColumn] = FileName;
                                 foreach (DataColumn dc in dataTable.Columns)
                                 {
                                     if (dt.Columns.Contains(dc.ColumnName))
@@ -150,7 +151,7 @@ namespace XMLtoExcel
 
                         foreach (DataTable dt in MainXMLData.Tables)
                         {
-                            DataColumn Col = dt.Columns.Add("FileKaNo");
+                            DataColumn Col = dt.Columns.Add(UniqueFileNoColumn);
                             Col.SetOrdinal(0);
                         }
 
@@ -173,9 +174,9 @@ namespace XMLtoExcel
                         foreach (DataTable dt in MainXMLData.Tables)
                         {
                             DataColumnCollection columns = dt.Columns;
-                            if (!columns.Contains("FileKaNo"))
+                            if (!columns.Contains(UniqueFileNoColumn))
                             {
-                                DataColumn Col = dt.Columns.Add("FileKaNo");
+                                DataColumn Col = dt.Columns.Add(UniqueFileNoColumn);
                                 Col.SetOrdinal(0);
                             }
                         }
@@ -200,7 +201,7 @@ namespace XMLtoExcel
                             foreach (DataRow dr in dataTable.Rows)
                             {
                                 DataRow dataRow = dt.NewRow();
-                                dataRow["FileKaNo"] = FileName;
+                                dataRow[UniqueFileNoColumn] = FileName;
                                 foreach (DataColumn dc in dataTable.Columns)
                                 {
                                     dataRow[dc.ColumnName] = dr[dc.ColumnName] == null ? "" : dr[dc.ColumnName];
@@ -264,39 +265,42 @@ namespace XMLtoExcel
 
         void ExcelToDataSet(string FilePath)
         {
-            FileStream stream = File.Open(FilePath, FileMode.Open, FileAccess.Read);
-
             IExcelDataReader excelReader;
+            DataSet excelData;
 
-            if (Path.GetExtension(FilePath) == "xls")
+            //FileStream stream = File.Open(FilePath, FileMode.Open, FileAccess.Read);
+            using (FileStream stream = new FileStream(FilePath, FileMode.Open, FileAccess.Read))
             {
-                //1. Reading from a binary Excel file ('97-2003 format; *.xls)
-                excelReader = ExcelReaderFactory.CreateBinaryReader(stream);
-            }
-            else
-            {
-                //2. Reading from a OpenXml Excel file (2007 format; *.xlsx)
-                excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
-            }
-            //3. DataSet - The result of each spreadsheet will be created in the result.Tables
-            //DataSet excelData = excelReader.AsDataSet();
-
-            //4.DataSet - The result of each spreadsheet will be created in the result.Tables with first column as header
-            var excelData = excelReader.AsDataSet(new ExcelDataSetConfiguration()
-            {
-                ConfigureDataTable = (_) => new ExcelDataTableConfiguration()
+                if (Path.GetExtension(FilePath) == "xls")
                 {
-                    UseHeaderRow = true
+                    //1. Reading from a binary Excel file ('97-2003 format; *.xls)
+                    excelReader = ExcelReaderFactory.CreateBinaryReader(stream);
                 }
-            });
+                else
+                {
+                    //2. Reading from a OpenXml Excel file (2007 format; *.xlsx)
+                    excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
+                }
 
+                //3. DataSet - The result of each spreadsheet will be created in the result.Tables
+                //DataSet excelData = excelReader.AsDataSet();
+
+                //4.DataSet - The result of each spreadsheet will be created in the result.Tables with first column as header
+                excelData = excelReader.AsDataSet(new ExcelDataSetConfiguration()
+                {
+                    ConfigureDataTable = (_) => new ExcelDataTableConfiguration()
+                    {
+                        UseHeaderRow = true
+                    }
+                });
+            }
             if (excelData != null)
             {
                 FolderBrowserDialog fd = new FolderBrowserDialog();
                 fd.Description = "Select Folder For Output XML Files";
                 if (fd.ShowDialog() == DialogResult.OK)
                 {
-                    var listofFiles = excelData.Tables[0].AsEnumerable().Select(x => x.Field<string>("FileKaNo")).Distinct().ToList();
+                    var listofFiles = excelData.Tables[0].AsEnumerable().Select(x => x.Field<string>(UniqueFileNoColumn)).Distinct().ToList();
                     DataSet dataSet;
                     foreach (var item in listofFiles)
                     {
@@ -306,7 +310,7 @@ namespace XMLtoExcel
                         foreach (DataTable tables in excelData.Tables)
                         {
                             //DataTable dt = new DataTable(tables.TableName);
-                            var dt = tables.AsEnumerable().Where(x => x.Field<string>("FileKaNo") == item).Select(x => x);
+                            var dt = tables.AsEnumerable().Where(x => x.Field<string>(UniqueFileNoColumn) == item).Select(x => x);
                             if (dt.Count() > 0)
                             {
                                 dataSet.Tables.Add(dt.CopyToDataTable());
@@ -362,12 +366,12 @@ namespace XMLtoExcel
                         #endregion
                         foreach (DataTable dt in FinalDataset.Tables)
                         {
-                            dt.Columns.Remove("FileKaNo");
+                            dt.Columns.Remove(UniqueFileNoColumn);
                         }
                         #region Removed
                         //foreach (DataTable dt in dataSet.Tables)
                         //{
-                        //    dt.Columns.Remove("FileKaNo");
+                        //    dt.Columns.Remove(UniqueFileNoColumn);
 
                         //    //foreach (DataRow row in dt.Rows)
                         //    //{
@@ -414,10 +418,11 @@ namespace XMLtoExcel
                     foreach (DataColumn col in dt.Columns)
                     {
                         myxmlfield = myxml.CreateElement(col.ColumnName);
-                        if (dr[col] == null)
+                        if (string.IsNullOrEmpty(dr[col].ToString()))
                             myxmlfield.IsEmpty = true;
                         else
                             myxmlfield.InnerText = dr[col] == null ? "" : dr[col].ToString();
+
                         myxmlrecord.AppendChild(myxmlfield);
                     }
                     myxml.ChildNodes[i].AppendChild(myxmlrecord);
