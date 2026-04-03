@@ -13,9 +13,11 @@ A C# utility library for converting XML data into multiple output formats — Ex
 ![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat&logo=dotnet&logoColor=white)
 
 ## Project structure
+```
 XMLConversion/
 ├── XMLtoExcel/   # XML to Excel conversion module
 └── XMLtoPDF/     # XML to PDF conversion module
+```
 
 ## Getting started
 ```bash
